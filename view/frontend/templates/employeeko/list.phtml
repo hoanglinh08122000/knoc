@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \Dtn\Employee\Block\EmployeeKo $block ;
+ * @linkFile app/code/Dtn/Employee/view/frontend/templates/list.phtml
+ */
+?>
+<div id="customer-feedback" data-bind="scope: 'feedback-form'">
+    <!-- ko template: getTemplate() --> <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+   {
+       "#customer-feedback": {
+           "Magento_Ui/js/core/app": {
+               "components": {
+                   "feedback-form": {
+                       "component": "Dtn_Employee\/js\/view\/test",
+                       "listProducts": <?php /* @escapeNotVerified */ echo $block->getJsLayout(); ?>
+                   }
+               }
+           }
+       }
+   }
+
+</script>

@@ -1,0 +1,22 @@
+<?php /** @var $block KnockOut */
+
+use Dtn\Employee\Block\KnockOut;
+
+$employee = $block->getEmployee();
+
+?>
+
+
+
+<div id="block-knockouts" data-bind="scope:'knockouts'" class="block">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#block-knockouts": {
+
+            "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getEmployee();?>
+
+        }
+    }
+</script>
+</div>
